@@ -1,0 +1,89 @@
+=== Inventory Management System Test ===
+Created 3 products:
+Product {
+  name: 'Laptop',
+  productId: 1001,
+  price: 999.99,
+  stock: 10
+}
+Product {
+  name: 'Smartphone',
+  productId: 1002,
+  price: 699.99,
+  stock: 0
+}
+Product {
+  name: 'Headphones',
+  productId: 1003,
+  price: 149.99,
+  stock: 25
+}
+
+Inventory after adding products:
+Inventory {
+  products: [
+    Product {
+      name: 'Laptop',
+      productId: 1001,
+      price: 999.99,
+      stock: 10
+    },
+    Product {
+      name: 'Smartphone',
+      productId: 1002,
+      price: 699.99,
+      stock: 0
+    },
+    Product {
+      name: 'Headphones',
+      productId: 1003,
+      price: 149.99,
+      stock: 25
+    }
+  ]
+}
+
+Testing adding stock:
+Adding 15 Smartphones to stock: Success
+Updated product2: Product {
+  name: 'Smartphone',
+  productId: 1002,
+  price: 699.99,
+  stock: 15
+}
+
+Testing selling products:
+Selling 5 Laptops: Success
+Selling 20 Headphones: Success
+Selling 10 Smartphones: Success
+Attempting to sell non-existent product: Failed (expected)
+
+Testing stock checks:
+Current stock of Laptops (ID 1001): 5
+Current stock of Smartphones (ID 1002): 5
+Current stock of Headphones (ID 1003): 5
+Checking stock of non-existent product (ID 9999): -1
+
+Final inventory status:
+Inventory {
+  products: [
+    Product {
+      name: 'Laptop',
+      productId: 1001,
+      price: 999.99,
+      stock: 5
+    },
+    Product {
+      name: 'Smartphone',
+      productId: 1002,
+      price: 699.99,
+      stock: 5
+    },
+    Product {
+      name: 'Headphones',
+      productId: 1003,
+      price: 149.99,
+      stock: 5
+    }
+  ]
+}
